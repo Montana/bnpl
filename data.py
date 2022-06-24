@@ -11,7 +11,7 @@ def __check_status(
         and anonymous_data_status.get_date()
         < customer_credit_last_usable_target_status.get_date()
     ):
-        logger.info("Update with minimum of source dates")
+        logger.info("Update with at least a minimum of source dates")
         min_date = min(
             bnpl_last_usable_target_status.get_date(),
             customer_credit_last_usable_target_status.get_date(),
